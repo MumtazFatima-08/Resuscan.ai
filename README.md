@@ -1,106 +1,133 @@
 # ResuScan.ai 📄
 
-A resume analysis web application that extracts information from PDF resumes, identifies relevant skills, calculates an ATS-style score, and provides suggestions for improvement.
+> **Analyze your resume. Find the gaps. Improve your chances.**
 
-## Overview
+ResuScan.ai is a lightweight web-based resume analyzer that extracts text from PDF resumes, checks resume content against configured rules and skill patterns, generates an ATS-style score, and provides actionable improvement suggestions.
 
-ResuScan.ai is a lightweight project focused on automating basic resume analysis. It combines PDF text extraction with rule-based checks to turn a resume into a structured set of results.
+## ✨ What It Does
 
-## Features
+- 📄 Accepts PDF resumes for analysis
+- 🔎 Extracts and processes resume text
+- ✅ Performs basic resume validation
+- 🧠 Detects relevant skills from resume content
+- ❌ Highlights missing skills
+- 📊 Generates an ATS-style score
+- 💡 Provides resume improvement suggestions
+- 🌐 Presents results through a simple web interface
 
-- 📄 Upload PDF resumes
-- ✅ Basic resume validation
-- 🧠 Detect relevant skills from resume content
-- ❌ Identify missing skills
-- 📊 Generate an ATS-style score
-- 💡 Provide improvement suggestions
-- 🎨 Web-based user interface
-
-## How It Works
+## 🔄 How It Works
 
 ```text
-PDF Resume
-    ↓
-Text Extraction
-    ↓
-Resume Validation
-    ↓
-Skills & Section Analysis
-    ↓
-Score Calculation
-    ↓
-Suggestions & Results
+        PDF Resume
+             │
+             ▼
+      Text Extraction
+             │
+             ▼
+     Resume Validation
+             │
+             ▼
+   Skills & Content Checks
+             │
+             ▼
+      Score Calculation
+             │
+             ▼
+     Suggestions & Results
 ```
 
-The backend extracts text from the uploaded PDF using PyPDF2 and analyzes the extracted content using the application's configured checks and skill patterns.
+The Flask backend receives the uploaded PDF, extracts its text using **PyPDF2**, and applies the application's configured checks and skill patterns to produce the analysis results.
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** Python, Flask
-- **PDF Processing:** PyPDF2
+| Layer | Technology |
+|---|---|
+| Frontend | HTML, CSS, JavaScript |
+| Backend | Python, Flask |
+| PDF Processing | PyPDF2 |
 
-## Project Structure
+## 📁 Project Structure
 
 ```text
 Resuscan.ai/
 │
 ├── backend/
 │   └── app.py
+│
 ├── frontend/
 │   └── ...
+│
 └── README.md
 ```
 
-## Run Locally
+## 🚀 Run Locally
 
-### 1. Start the backend
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/MumtazFatima-08/Resuscan.ai.git
+cd Resuscan.ai
+```
+
+### 2. Start the backend
 
 ```bash
 cd backend
+python -m venv .venv
+```
+
+**Windows:**
+
+```bash
+.venv\Scripts\activate
+```
+
+Install dependencies and start the Flask application:
+
+```bash
+pip install -r requirements.txt
 python app.py
 ```
 
-### 2. Start the frontend
+### 3. Start the frontend
 
-In a separate terminal:
+Open a second terminal:
 
 ```bash
 cd frontend
 python -m http.server 5500
 ```
 
-Open:
+Then open:
 
 ```text
 http://127.0.0.1:5500
 ```
 
-## Limitations
+## ⚠️ Limitations
 
-ResuScan.ai is a project-level resume analyzer rather than a full ATS or production-grade recruitment system.
+ResuScan.ai is a **project-level resume analysis tool**, not a commercial ATS or production recruitment platform.
 
-Its analysis can be limited by:
+The results can be affected by:
 
-- PDF formatting and extraction quality
-- Resume wording and variations in skill names
-- Rule-based scoring
-- Lack of semantic understanding of job descriptions
+- PDF formatting and text extraction quality
+- Different ways of writing or naming skills
+- Rule-based scoring limitations
+- Lack of semantic job-description understanding
 
-The ATS-style score should therefore be treated as an indicative score, not an actual score from a commercial ATS platform.
+The generated ATS-style score should therefore be treated as an **indicative project score**, not as a score produced by a real commercial ATS.
 
-## Future Improvements
+## 🔮 Future Improvements
 
 - NLP-based semantic resume analysis
 - Job-description matching
 - More robust scoring and evaluation
-- Resume history and comparison
-- Improved extraction for complex PDF layouts
-- LLM-assisted suggestions
+- Resume history and side-by-side comparison
+- Better handling of complex PDF layouts
+- LLM-assisted, context-aware suggestions
 - Public deployment
 
-## Author
+## 👤 Author
 
-**Mumtaz Fatima**
-
+**Mumtaz Fatima**  
 CSE (AI & ML) Student
