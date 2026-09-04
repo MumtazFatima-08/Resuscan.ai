@@ -6,37 +6,32 @@ ResuScan.ai is a lightweight web-based resume analyzer that extracts text from P
 
 ## ✨ What It Does
 
-- 📄 Accepts PDF resumes for analysis
-- 🔎 Extracts and processes resume text
-- ✅ Performs basic resume validation
-- 🧠 Detects relevant skills from resume content
-- ❌ Highlights missing skills
-- 📊 Generates an ATS-style score
-- 💡 Provides resume improvement suggestions
-- 🌐 Presents results through a simple web interface
+- 📄 Upload and analyze PDF resumes
+- 🔎 Extract resume text for analysis
+- ✅ Perform basic resume validation
+- 🧠 Detect relevant skills
+- ❌ Identify missing skills
+- 📊 Generate an ATS-style score
+- 💡 Provide improvement suggestions
+- 🌐 Display results through a web interface
 
 ## 🔄 How It Works
 
 ```text
-        PDF Resume
-             │
-             ▼
-      Text Extraction
-             │
-             ▼
-     Resume Validation
-             │
-             ▼
-   Skills & Content Checks
-             │
-             ▼
-      Score Calculation
-             │
-             ▼
-     Suggestions & Results
+PDF Resume
+    ↓
+Text Extraction
+    ↓
+Resume Validation
+    ↓
+Skills & Content Checks
+    ↓
+Score Calculation
+    ↓
+Suggestions & Results
 ```
 
-The Flask backend receives the uploaded PDF, extracts its text using **PyPDF2**, and applies the application's configured checks and skill patterns to produce the analysis results.
+The Flask backend receives the uploaded PDF and uses **PyPDF2** to extract its text. The extracted content is then evaluated using the application's configured checks and skill patterns to produce the analysis results.
 
 ## 🛠️ Tech Stack
 
@@ -69,7 +64,7 @@ git clone https://github.com/MumtazFatima-08/Resuscan.ai.git
 cd Resuscan.ai
 ```
 
-### 2. Start the backend
+### 2. Set up the backend
 
 ```bash
 cd backend
@@ -78,11 +73,11 @@ python -m venv .venv
 
 **Windows:**
 
-```bash
+```powershell
 .venv\Scripts\activate
 ```
 
-Install dependencies and start the Flask application:
+Install the dependencies and start the Flask application:
 
 ```bash
 pip install -r requirements.txt
@@ -108,14 +103,14 @@ http://127.0.0.1:5500
 
 ResuScan.ai is a **project-level resume analysis tool**, not a commercial ATS or production recruitment platform.
 
-The results can be affected by:
+Results may be affected by:
 
 - PDF formatting and text extraction quality
 - Different ways of writing or naming skills
 - Rule-based scoring limitations
 - Lack of semantic job-description understanding
 
-The generated ATS-style score should therefore be treated as an **indicative project score**, not as a score produced by a real commercial ATS.
+The generated ATS-style score should therefore be treated as an **indicative project score**, not as a score produced by a commercial ATS.
 
 ## 🔮 Future Improvements
 
