@@ -1,91 +1,106 @@
-# 🤖 ResuScan.ai
+# ResuScan.ai 📄
 
-An AI-powered Resume Analyzer that evaluates resumes, detects skills, and provides smart suggestions to improve them.
+A resume analysis web application that extracts information from PDF resumes, identifies relevant skills, calculates an ATS-style score, and provides suggestions for improvement.
 
----
+## Overview
 
-## 🚀 Features
+ResuScan.ai is a lightweight project focused on automating basic resume analysis. It combines PDF text extraction with rule-based checks to turn a resume into a structured set of results.
 
-* 📄 Upload PDF resumes
-* ✅ Validates whether the file is actually a resume
-* 🧠 Detects key skills from the resume
-* ❌ Identifies missing skills
-* 📊 Provides ATS-style score with circular visualization
-* 💡 Gives actionable suggestions to improve resume quality
-* 🎨 Clean and modern dark UI
+## Features
 
----
+- 📄 Upload PDF resumes
+- ✅ Basic resume validation
+- 🧠 Detect relevant skills from resume content
+- ❌ Identify missing skills
+- 📊 Generate an ATS-style score
+- 💡 Provide improvement suggestions
+- 🎨 Web-based user interface
 
-## 🛠️ Tech Stack
+## How It Works
 
-* **Frontend:** HTML, CSS, JavaScript
-* **Backend:** Python (Flask)
-* **PDF Processing:** PyPDF2
+```text
+PDF Resume
+    ↓
+Text Extraction
+    ↓
+Resume Validation
+    ↓
+Skills & Section Analysis
+    ↓
+Score Calculation
+    ↓
+Suggestions & Results
+```
 
----
+The backend extracts text from the uploaded PDF using PyPDF2 and analyzes the extracted content using the application's configured checks and skill patterns.
 
-## ⚙️ How It Works
+## Tech Stack
 
-1. User uploads a resume (PDF)
-2. Backend extracts text using PyPDF2
-3. System checks if it's a valid resume
-4. Skills and sections are analyzed
-5. Score is calculated
-6. Results are displayed with:
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** Python, Flask
+- **PDF Processing:** PyPDF2
 
-   * Score
-   * Skills detected
-   * Missing skills
-   * Suggestions
+## Project Structure
 
----
+```text
+Resuscan.ai/
+│
+├── backend/
+│   └── app.py
+├── frontend/
+│   └── ...
+└── README.md
+```
 
-## 🖥️ Run Locally
+## Run Locally
 
-### Backend
+### 1. Start the backend
 
 ```bash
 cd backend
 python app.py
 ```
 
-### Frontend
+### 2. Start the frontend
+
+In a separate terminal:
 
 ```bash
 cd frontend
 python -m http.server 5500
 ```
 
-Open in browser:
+Open:
 
-```
+```text
 http://127.0.0.1:5500
 ```
 
----
+## Limitations
 
-## 📌 Future Improvements
+ResuScan.ai is a project-level resume analyzer rather than a full ATS or production-grade recruitment system.
 
-* 🔍 NLP-based resume analysis (more accurate)
-* 📈 Better scoring system
-* 🌐 Deploy online with public access
-* 📂 Resume history tracking
-* 🤖 AI-powered suggestions using LLMs
+Its analysis can be limited by:
 
----
+- PDF formatting and extraction quality
+- Resume wording and variations in skill names
+- Rule-based scoring
+- Lack of semantic understanding of job descriptions
 
-## 📸 Preview
+The ATS-style score should therefore be treated as an indicative score, not an actual score from a commercial ATS platform.
 
-(Add your project screenshot here)
+## Future Improvements
 
----
+- NLP-based semantic resume analysis
+- Job-description matching
+- More robust scoring and evaluation
+- Resume history and comparison
+- Improved extraction for complex PDF layouts
+- LLM-assisted suggestions
+- Public deployment
 
-## 🙌 Author
+## Author
 
-Built with focus on real-world problem solving and clean UI design.
+**Mumtaz Fatima**
 
----
-
-## ⭐ If you like this project
-
-Give it a star on GitHub ⭐
+CSE (AI & ML) Student
